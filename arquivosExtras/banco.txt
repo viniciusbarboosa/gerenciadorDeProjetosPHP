@@ -1,0 +1,13 @@
+CREATE DATABASE gerenciador_projetos_php;
+USE gerenciador_projetos_php;
+DROP DATABASE gerenciador_projetos_php;
+SELECT * FROM USERS;
+
+CREATE TABLE users (
+ id int not null PRIMARY KEY AUTO_INCREMENT,
+ nome varchar(200) not null,
+ password varchar(100) not null,
+ email varchar(200) not null,
+ employee boolean not null,
+ tipo_user varchar(50) not null
+);
