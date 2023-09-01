@@ -4,10 +4,27 @@ DROP DATABASE gerenciador_projetos_php;
 SELECT * FROM USERS;
 
 CREATE TABLE users (
- id int not null PRIMARY KEY AUTO_INCREMENT,
+ id_users int not null PRIMARY KEY AUTO_INCREMENT,
  nome varchar(200) not null,
  password varchar(100) not null,
  email varchar(200) not null,
  employee boolean not null,
  tipo_user varchar(50) not null
+);
+
+CREATE TABLE cases(
+id_cases int not null PRIMARY KEY AUTO_INCREMENT,
+reporter varchar(100) NOT NULL,
+priority varchar(100) NOT NULL,
+state varchar(100) NOT NULL,
+resume_case varchar(100) NOT NULL,
+descricao varchar(100) NOT NULL
+);
+
+CREATE TABLE report_cases(
+id int not null PRIMARY KEY AUTO_INCREMENT,
+id_case int,
+id_users int,
+foreign key(ID_CASE) REFERENCES CASES(ID_CASES),
+foreign key(ID_USERS) REFERENCES USERS(ID_USERS)
 );

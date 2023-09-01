@@ -56,8 +56,14 @@
                 Interface
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url()?>Cases/report_case">
+                    <i class="fas fa-file-medical"></i> 
+                    <span>Relatar Caso</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+        <!--    <li class="nav-item active">
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
                     aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -71,7 +77,7 @@
                         <a class="collapse-item active" href="cards.html">TESTE</a>
                     </div>
                 </div>
-            </li>
+            </li>   ITEM DROPBOX -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
