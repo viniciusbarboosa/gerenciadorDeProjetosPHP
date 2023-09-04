@@ -53,13 +53,19 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Casos
             </div>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url()?>Cases/report_case">
                     <i class="fas fa-file-medical"></i> 
                     <span>Relatar Caso</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url()?>Cases/listCase">
+                    <i class="fas fa-list"></i>
+                    <span>Lista De Todos Os Casos</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu -->

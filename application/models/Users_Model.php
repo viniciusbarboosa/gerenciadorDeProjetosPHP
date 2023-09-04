@@ -26,6 +26,6 @@ class Users_Model extends CI_Model {
     public function listAllUsers(){
         $this->db->order_by('nome', 'asc');
         $query = $this->db->get('users');
-        return $query->result();;
+        return $query->result();
     }
 }

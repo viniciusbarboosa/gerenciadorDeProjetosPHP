@@ -2,6 +2,8 @@ CREATE DATABASE gerenciador_projetos_php;
 USE gerenciador_projetos_php;
 DROP DATABASE gerenciador_projetos_php;
 SELECT * FROM USERS;
+SELECT * FROM CASES;
+SELECT * FROM ATRIBUICOES;
 
 CREATE TABLE users (
  id_users int not null PRIMARY KEY AUTO_INCREMENT,
@@ -14,17 +16,22 @@ CREATE TABLE users (
 
 CREATE TABLE cases(
 id_cases int not null PRIMARY KEY AUTO_INCREMENT,
-reporter varchar(100) NOT NULL,
+id_reporter int not null,
 priority varchar(100) NOT NULL,
 state varchar(100) NOT NULL,
 resume_case varchar(100) NOT NULL,
-descricao varchar(100) NOT NULL
+descricao varchar(200) NOT NULL,
+foreign key(id_reporter) REFERENCES users(id_users)
 );
 
-CREATE TABLE report_cases(
-id int not null PRIMARY KEY AUTO_INCREMENT,
-id_case int,
-id_users int,
-foreign key(ID_CASE) REFERENCES CASES(ID_CASES),
-foreign key(ID_USERS) REFERENCES USERS(ID_USERS)
+CREATE TABLE atribuicoes(
+id int not null PRIMARY KEY auto_increment,
+id_cases int not null,
+id_user int not null,
+foreign key(id_cases) REFERENCES cases(id_cases),
+foreign key(id_user) REFERENCES users(id_users)
+);
+
+CREATE TABLE line_time(
+id int not null PRIMARY KEY auto_increment
 );
