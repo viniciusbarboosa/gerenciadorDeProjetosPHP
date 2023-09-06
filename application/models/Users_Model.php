@@ -28,4 +28,15 @@ class Users_Model extends CI_Model {
         $query = $this->db->get('users');
         return $query->result();
     }
+
+    public function editUsers($email,$senha,$id){
+        $dataAssociacao = [
+			"email" => $email,
+			"password" => $senha
+		];
+
+        $this->db->where('id_users', $id);
+    	$this->db->update('users', $dataAssociacao);
+    }
+
 }

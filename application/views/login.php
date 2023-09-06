@@ -22,7 +22,8 @@
     <form class="form-signin" action="<?= base_url() ?>login/logar" method="POST">
       <div class="text-center mb-4">
         <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Nome do Sistema</h1>
+
+        <h1 class="h3 mb-3 font-weight-normal">Project Go</h1>
         <p>Bem Vindo ao Sistema de Gerenciamentos de Projeto caso não tenha um usuario entre em contato <a href="mailto:vindzn88@gmail.com?subject=Assunto%20do%20E-mail&body=Conteúdo%20do%20e-mail">Conosco</a></p></p>
       </div>
 
@@ -37,8 +38,7 @@
       </div>
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-      <button class="btn btn-lg btn-primary btn-block" type="button" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastrar</button>
-      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; ProjectGo</p>
     </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>

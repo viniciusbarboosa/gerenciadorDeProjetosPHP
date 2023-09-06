@@ -9,7 +9,7 @@
                 <label for="descricao" class="form-label">Descrição</label>
                 <textarea class="form-control" name="descricao" id="descricao" rows="4" required></textarea>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 d-none">
                 <label for="descricao" class="form-label">Relator</label>
                 <input type="number" class="form-control" name="relator" id="relator" value="<?= $user->id_users ?>">
             </div>

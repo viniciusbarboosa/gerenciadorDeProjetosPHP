@@ -6,6 +6,7 @@ class Cases extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Users_Model");
 		$this->load->model("Cases_Model");
+		checarLogin();
 	} 
 
 	public function index(){
@@ -78,5 +79,10 @@ class Cases extends CI_Controller {
 	public function reportForMe($idCase,$idUser){
 		$this->Cases_Model->AssignedForMe($idCase,$idUser);
 		redirect('Cases/listCase');
+	}
+
+	public function concluirCase($idCase){
+		$this->Cases_Model->concluido($idCase);
+		redirect('Users');
 	}
 }

@@ -33,5 +33,6 @@ foreign key(id_user) REFERENCES users(id_users)
 );
 
 CREATE TABLE line_time(
-id int not null PRIMARY KEY auto_increment
+id int not null PRIMARY KEY auto_increment,
+body varchar(200)
 );

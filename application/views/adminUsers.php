@@ -14,7 +14,9 @@
       </div>
     </div>
     <div class="col-md-6 text-end">
-      <button class="btn btn-success" type="button">Adicionar</button>
+      <a type="button" class="btn btn-success" href="<?= base_url()?>/Users/addUser">
+          Adicionar
+      </a>
     </div>
   </div>
 
@@ -91,3 +93,59 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+
+    <!--MODAL-->
+<!-- Modal de Adicionar Usuário -->
+<div class="modal fade" id="adicionarUsuarioModal" tabindex="-1" aria-labelledby="adicionarUsuarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="adicionarUsuarioModalLabel">Adicionar Usuário</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário para adicionar um novo usuário -->
+                <form method="post" action="<?php echo base_url('usuario/adicionar'); ?>">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha:</label>
+                        <input type="password" class="form-control" id="senha" name="senha" required>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Adicionar Usuário">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+<?php
+// Verifica se a flashdata "falhaLogin" está definida e não está vazia
+if ($this->session->flashdata('add_sucess')) { ?>
+<script>
+  // Emitindo o SweetAlert para informar que as credenciais de login são inválidas
+  Swal.fire({
+    icon: "success",
+    title: "Sucesso!",
+    text: " <?= $this->session->flashdata('add_sucess') ?>"
+  });
+</script>;
+
+<?php
+}
+?>

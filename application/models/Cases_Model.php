@@ -61,4 +61,19 @@ class Cases_Model extends CI_Model {
         return $query->result();
 	}
 
+	public function concluido($id){
+        $dataAssociacao = [
+			"state" => "desenvolvido"
+		];
+        $this->db->where('id_cases', $id);
+        $this->db->update('cases', $dataAssociacao);
+    }
+
+	public function lineTime($string){
+        $data = [
+			"body" => $string
+		];
+		$this->db->insert('line_time',$data);
+    }
+
 }
